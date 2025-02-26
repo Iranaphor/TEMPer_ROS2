@@ -1,0 +1,6 @@
+# Grant read/write access to the PCsensor TEMPerGold device
+# and create a symlink /dev/tempergold
+
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", \
+    ATTRS{idVendor}=="3553", ATTRS{idProduct}=="a001", \
+    MODE="0660", GROUP="plugdev", SYMLINK+="tempergold"

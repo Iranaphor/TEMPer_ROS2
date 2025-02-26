@@ -21,6 +21,7 @@ setup(
     license='TODO: License declaration',
     entry_points={
         'console_scripts': [
+            'publish_readings.py = temper_ros2.publish_readings:main'
         ],
     },
 )
